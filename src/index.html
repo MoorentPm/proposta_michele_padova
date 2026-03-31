@@ -281,12 +281,12 @@
 
       <div class="relative rounded-3xl overflow-hidden shadow-2xl reveal-right" style="height: 420px;">
         <img alt="Abano Terme Vista Aerea" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDLW_N0-S65gKOuGgYgLfw_ww8AehuoTE9b5eLy_jIqRW5kwWTvBFuyJTZUPd52IQ1n772a-merRKoFMEjjh1TyjyadlksscUZNe56OW6XAUQbg31m7cuisVo_aI0_BiTY0LpBH2vP7gKev2vGQxSBnSqscw0mN5LprUIR4GveLZxxxeh-GtEhlkuD_yUArhJ48fKaKrK4K1zpmzaQ735ktJMhKAyI84LN7cPbVZYHgizgBPURHeqzijsjPEjy4S9dWTwUHEYErPXP"/>
-        <div class="absolute bottom-4 right-4 left-4 md:left-auto md:max-w-xs bg-white/92 backdrop-blur p-4 rounded-xl shadow-sm">
+        <div class="absolute bottom-4 right-4 left-4 md:left-auto md:max-w-xs bg-white p-4 rounded-xl shadow-xl">
           <div class="flex items-center gap-2 mb-2">
             <span class="material-symbols-outlined text-secondary text-xl">water_drop</span>
             <span class="font-bold text-primary text-sm">Fons Salutis</span>
           </div>
-          <p class="text-xs text-on-surface-variant">Oltre 2.9 milioni di presenze annue, focalizzato sul benessere e la salute.</p>
+          <p class="text-xs text-on-surface font-medium">Oltre 2.9 milioni di presenze annue, focalizzato sul benessere e la salute.</p>
         </div>
       </div>
     </div>
@@ -407,7 +407,9 @@
   <div id="panel-chart" class="scenario-tab">
     <div class="max-w-3xl mx-auto px-5 md:px-8">
       <div class="bg-surface-container-lowest rounded-3xl p-6 md:p-10 shadow-sm border border-outline-variant/20">
-        <canvas id="scenarioChart" style="height: 320px; min-height: 280px;"></canvas>
+        <div style="position: relative; height: 340px;">
+          <canvas id="scenarioChart"></canvas>
+        </div>
         <p class="text-xs text-on-surface-variant text-center mt-4">*Tutti i valori in € annui. Costi includono tasse, gestione e manutenzione.</p>
       </div>
     </div>
@@ -473,15 +475,15 @@
           <img alt="Appartamento Kol — dettaglio interno" class="w-full h-64 md:h-80 lg:h-[440px] object-cover"
             src="../8309ad48-290b-4a77-a955-b19b39f18cb3.webp"/>
           <div class="absolute inset-0 bg-gradient-to-tr from-primary/35 to-transparent"></div>
-          <div class="absolute bottom-4 left-4 right-4 bg-white/92 backdrop-blur p-4 rounded-xl">
+          <div class="absolute bottom-4 left-4 right-4 bg-white p-4 rounded-xl shadow-xl">
             <div class="flex items-center justify-between">
               <div>
-                <p class="text-xs text-on-surface-variant">Differenza netta annua</p>
+                <p class="text-xs text-on-surface-variant font-medium">Differenza netta annua</p>
                 <p class="font-headline text-xl text-secondary font-bold">+€11.605</p>
               </div>
-              <div class="bg-secondary/10 rounded-xl p-3 text-center">
-                <p class="text-xs text-on-surface-variant">Vantaggio B vs A</p>
-                <p class="font-bold text-primary">+146%</p>
+              <div class="bg-primary rounded-xl p-3 text-center">
+                <p class="text-xs text-white/80">Vantaggio B vs A</p>
+                <p class="font-bold text-white text-lg">+146%</p>
               </div>
             </div>
           </div>
