@@ -71,6 +71,11 @@
   .asymmetric-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; }
   @media (max-width: 1024px) { .asymmetric-grid { grid-template-columns: 1fr; } }
 
+  /* Nav active link */
+  .nav-link { color: #424844; font-size: .875rem; transition: color .2s; }
+  .nav-link:hover { color: #163428; }
+  .nav-link.nav-active { color: #163428; font-weight: 600; border-bottom: 2px solid #7c5730; }
+
   /* Range inputs */
   input[type=range] { -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; outline: none; cursor: pointer; }
   input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: #ffdea5; cursor: pointer; transition: transform .15s; }
@@ -153,11 +158,11 @@
   <div class="flex justify-between items-center h-16 md:h-20 px-5 md:px-8 max-w-7xl mx-auto">
     <img src="images/logo-moorent.png" alt="Moorent Pm" class="w-auto" style="height: 52px; max-height: none;"/>
     <div class="hidden lg:flex items-center gap-7">
-      <a class="text-primary font-semibold border-b-2 border-secondary text-sm transition-colors hover:text-secondary" href="#analysis">Mercato</a>
-      <a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#scenarios">Scenari</a>
-      <a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#calculator">Calcola</a>
-      <a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#legals">Normativa</a>
-      <a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#strategy">Strategia</a>
+      <a class="nav-link nav-active" href="#analysis">Mercato</a>
+      <a class="nav-link" href="#scenarios">Scenari</a>
+      <a class="nav-link" href="#calculator">Calcola</a>
+      <a class="nav-link" href="#legals">Normativa</a>
+      <a class="nav-link" href="#strategy">Strategia</a>
     </div>
     <div class="flex items-center gap-3">
       <a href="https://www.airbnb.co.uk/rooms/1533414930217775110?guests=1&adults=1&s=67&unique_share_id=ee721007-574e-4f9f-9289-41e5cdf58a31" target="_blank" rel="noopener" class="hidden sm:block bg-secondary text-white rounded-full px-5 py-2 text-sm font-medium hover:opacity-90 transition-all duration-300">
@@ -954,30 +959,18 @@ window.addEventListener('scroll', () => {
 });
 
 // ── Nav active link ───────────────────────────
-const navLinks = document.querySelectorAll('#main-nav a[href^="#"]');
+const navLinks = document.querySelectorAll('#main-nav a.nav-link');
 const sectionIds = ['analysis', 'scenarios', 'calculator', 'legals', 'strategy'];
-const navHeight = 80;
-
-function setActiveLink(id) {
-  navLinks.forEach(link => {
-    const isActive = link.getAttribute('href') === '#' + id;
-    if (isActive) {
-      link.className = 'text-primary font-semibold border-b-2 border-secondary text-sm transition-colors hover:text-secondary';
-    } else {
-      link.className = 'text-on-surface-variant hover:text-primary transition-colors text-sm';
-    }
-  });
-}
 
 function updateActiveNav() {
   let current = sectionIds[0];
   sectionIds.forEach(id => {
     const el = document.getElementById(id);
-    if (el && el.getBoundingClientRect().top <= navHeight + 40) {
-      current = id;
-    }
+    if (el && el.getBoundingClientRect().top <= 100) current = id;
   });
-  setActiveLink(current);
+  navLinks.forEach(link => {
+    link.classList.toggle('nav-active', link.getAttribute('href') === '#' + current);
+  });
 }
 
 window.addEventListener('scroll', updateActiveNav, { passive: true });
