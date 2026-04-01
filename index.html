@@ -956,30 +956,32 @@ window.addEventListener('scroll', () => {
 // ── Nav active link ───────────────────────────
 const navLinks = document.querySelectorAll('#main-nav a[href^="#"]');
 const sectionIds = ['analysis', 'scenarios', 'calculator', 'legals', 'strategy'];
+const navHeight = 80;
 
 function setActiveLink(id) {
   navLinks.forEach(link => {
     const isActive = link.getAttribute('href') === '#' + id;
-    link.classList.toggle('text-primary', isActive);
-    link.classList.toggle('font-semibold', isActive);
-    link.classList.toggle('border-b-2', isActive);
-    link.classList.toggle('border-secondary', isActive);
-    link.classList.toggle('hover:text-secondary', isActive);
-    link.classList.toggle('text-on-surface-variant', !isActive);
-    link.classList.toggle('hover:text-primary', !isActive);
+    if (isActive) {
+      link.className = 'text-primary font-semibold border-b-2 border-secondary text-sm transition-colors hover:text-secondary';
+    } else {
+      link.className = 'text-on-surface-variant hover:text-primary transition-colors text-sm';
+    }
   });
 }
 
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) setActiveLink(entry.target.id);
+function updateActiveNav() {
+  let current = sectionIds[0];
+  sectionIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= navHeight + 40) {
+      current = id;
+    }
   });
-}, { rootMargin: '-30% 0px -60% 0px' });
+  setActiveLink(current);
+}
 
-sectionIds.forEach(id => {
-  const el = document.getElementById(id);
-  if (el) sectionObserver.observe(el);
-});
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+updateActiveNav();
 </script>
 </body>
 </html>
