@@ -22,7 +22,17 @@ The page covers: market analysis, competitor positioning (10 competitors for 8+ 
 - Never mention students — this is purely about short-term rental (affitto breve)
 - All financial calculations must always include Moorent PM commission (20% of gross revenue)
 - Do not show or reference an estimated property value
-- The 10 Airbnb competitor listings for 8+ guests in Padova are documented in the `#competitors` section
+- The 10 Airbnb competitor listings for 8+ guests in Padova are documented in the `#competitors` section:
+  1. Alloggio in affitto — Nicola (9 ospiti) → /rooms/1360822496647070880
+  2. Grazioso appartamento a due passi dal centro (9 ospiti, Federico) → /rooms/1180549688989748449
+  3. Suite IdealHome (8 ospiti, Davide) → /rooms/1376830566650531709
+  4. Appartamento — Lt Portavenezia (8 ospiti) → /rooms/1391251295856948703
+  5. Da verificare (8+ ospiti) → /rooms/1603782793545780999
+  6. Alloggio in affitto — Mat (9 ospiti) → /rooms/1359247600118882909
+  7. Alloggio in affitto — Giovanni (8 ospiti) → /rooms/1085357289037493395
+  8. Casa — Francesco (9 ospiti) → /rooms/928921306822909690
+  9. Alloggio in affitto — Filippo (10 ospiti) → /rooms/1354927843480361037
+  10. Alloggio in affitto — Vincenzo (8 ospiti) → /rooms/26769365
 
 ## File Organization
 
