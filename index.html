@@ -107,13 +107,13 @@
   }
   [data-tip]:hover::after { opacity: 1; }
 
-  /* Hero gradient background */
-  .hero-gradient {
-    background: linear-gradient(135deg, #0d2218 0%, #163428 40%, #1e3d2f 70%, #2d4b3e 100%);
-  }
-  .hero-pattern {
-    background-image: radial-gradient(circle at 20% 50%, rgba(255,222,165,.06) 0%, transparent 50%),
-                      radial-gradient(circle at 80% 20%, rgba(124,87,48,.08) 0%, transparent 40%);
+  /* Hero photo background */
+  .hero-photo {
+    background-image:
+      linear-gradient(135deg, rgba(10,26,18,0.82) 0%, rgba(22,52,40,0.72) 45%, rgba(35,65,50,0.68) 100%),
+      url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/View_of_Padua_from_La_Specola.jpg/1920px-View_of_Padua_from_La_Specola.jpg');
+    background-size: cover;
+    background-position: center 30%;
   }
 </style>
 </head>
@@ -125,6 +125,7 @@
     <img src="images/logo-moorent.png" alt="Moorent Pm" class="w-auto" style="height: 52px; max-height: none;"/>
     <div class="hidden lg:flex items-center gap-7">
       <a class="nav-link nav-active" href="#analysis">Mercato</a>
+      <a class="nav-link" href="#competitors">Competitor</a>
       <a class="nav-link" href="#scenarios">Proiezione</a>
       <a class="nav-link" href="#calculator">Calcolatore</a>
       <a class="nav-link" href="#legals">Normativa</a>
@@ -146,6 +147,7 @@
 <!-- Mobile Menu -->
 <div id="mobile-menu" class="fixed inset-0 bg-primary/97 backdrop-blur-md z-40 flex-col items-center justify-center gap-7 text-center">
   <a class="text-white font-headline text-2xl hover:text-tertiary-fixed transition-colors" href="#analysis" onclick="closeMobileMenu()">Mercato</a>
+  <a class="text-white font-headline text-2xl hover:text-tertiary-fixed transition-colors" href="#competitors" onclick="closeMobileMenu()">Competitor</a>
   <a class="text-white font-headline text-2xl hover:text-tertiary-fixed transition-colors" href="#scenarios" onclick="closeMobileMenu()">Proiezione</a>
   <a class="text-white font-headline text-2xl hover:text-tertiary-fixed transition-colors" href="#calculator" onclick="closeMobileMenu()">Calcolatore</a>
   <a class="text-white font-headline text-2xl hover:text-tertiary-fixed transition-colors" href="#legals" onclick="closeMobileMenu()">Normativa</a>
@@ -158,7 +160,7 @@
 <!-- ══════════════════════════════════════════════
      HERO
 ══════════════════════════════════════════════ -->
-<header class="relative min-h-screen flex items-end pb-12 md:items-center pt-16 md:pt-20 overflow-hidden hero-gradient hero-pattern">
+<header class="relative min-h-screen flex items-end pb-12 md:items-center pt-16 md:pt-20 overflow-hidden hero-photo">
 
   <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 w-full">
     <div class="max-w-xl md:max-w-2xl mb-10 md:mb-16">
@@ -196,11 +198,11 @@
         <span class="text-white/70 text-xs md:text-sm font-medium">Ricavo lordo annuo</span>
       </div>
       <div class="bg-white/10 backdrop-blur-xl p-4 md:p-6 rounded-xl border border-white/15 card-lift"
-           data-tip="Dopo OTA (15%) e cedolare secca (21%)">
+           data-tip="Dopo OTA (15%), cedolare secca (21%) e gestione Moorent (20%)">
         <span class="block text-tertiary-fixed font-headline text-2xl md:text-3xl mb-1">
-          €<span class="counter-val" data-target="47125" data-suffix="" data-format="it">0</span>
+          €<span class="counter-val" data-target="32286" data-suffix="" data-format="it">0</span>
         </span>
-        <span class="text-white/70 text-xs md:text-sm font-medium">Utile netto annuo</span>
+        <span class="text-white/70 text-xs md:text-sm font-medium">Reddito netto per te</span>
       </div>
       <div class="bg-white/10 backdrop-blur-xl p-4 md:p-6 rounded-xl border border-white/15 card-lift"
            data-tip="Tariffa media giornaliera — varia da €285 (gen) a €405 (giu)">
@@ -222,19 +224,19 @@
       <div class="reveal-left">
         <span class="text-secondary font-semibold tracking-widest uppercase text-xs md:text-sm block mb-4">Contesto di Mercato</span>
         <h2 class="font-headline text-3xl md:text-4xl lg:text-5xl text-primary leading-tight mb-6 md:mb-8">
-          Padova: arte, università e un mercato STR in forte crescita
+          Padova: arte, cultura e un mercato STR in forte crescita
         </h2>
         <p class="text-on-surface-variant text-base md:text-lg leading-relaxed mb-6 md:mb-8">
-          Il centro storico di Padova — dichiarato dall'UNESCO come sito seriale dei Comuni medievali del Nord Italia — attrae ogni anno milioni di visitatori tra turisti culturali, viaggiatori d'affari e famiglie legate all'Università degli Studi, la terza più antica del mondo. La scarsità di appartamenti di lusso nel cuore della città crea un vantaggio competitivo immediato per chi entra sul mercato degli affitti brevi di qualità.
+          Il centro storico di Padova — dichiarato dall'UNESCO come sito seriale dei Comuni medievali del Nord Italia — attrae ogni anno milioni di visitatori tra turisti culturali, viaggiatori d'affari e delegazioni legate al Distretto Biomedicale, il polo industriale più importante del Nord-Est. La scarsità di appartamenti di lusso per gruppi nel cuore della città crea un vantaggio competitivo immediato per chi entra sul mercato degli affitti brevi di qualità.
         </p>
         <div class="bg-secondary-container/30 p-5 md:p-6 rounded-2xl border-l-4 border-secondary italic text-secondary text-sm md:text-base mb-6 md:mb-8">
           "Un appartamento di lusso in centro a Padova non compete con gli hotel — li surclassa in esperienza e convenienza."
         </div>
         <div class="grid grid-cols-2 gap-3 md:gap-4">
           <div class="bg-surface-container-low p-5 md:p-6 rounded-2xl text-center card-lift">
-            <span class="material-symbols-outlined text-3xl md:text-4xl text-primary mb-3 block">school</span>
-            <div class="font-headline text-lg md:text-xl text-primary">65.000+</div>
-            <div class="text-xs text-on-surface-variant mt-1">Studenti universitari</div>
+            <span class="material-symbols-outlined text-3xl md:text-4xl text-primary mb-3 block">group</span>
+            <div class="font-headline text-lg md:text-xl text-primary">Solo 10</div>
+            <div class="text-xs text-on-surface-variant mt-1">Competitor 8+ ospiti in città</div>
           </div>
           <div class="bg-surface-container-low p-5 md:p-6 rounded-2xl text-center card-lift">
             <span class="material-symbols-outlined text-3xl md:text-4xl text-primary mb-3 block">train</span>
@@ -291,6 +293,130 @@
 </section>
 
 <!-- ══════════════════════════════════════════════
+     COMPETITOR ANALYSIS
+══════════════════════════════════════════════ -->
+<section class="py-16 md:py-24 bg-surface-container-low" id="competitors">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center mb-10 md:mb-14 reveal">
+      <span class="text-secondary font-semibold tracking-widest uppercase text-xs md:text-sm block mb-4">Analisi Competitiva</span>
+      <h2 class="font-headline text-3xl md:text-4xl lg:text-5xl text-primary mb-4">Solo 10 competitor in tutta Padova</h2>
+      <p class="text-on-surface-variant text-sm md:text-base max-w-2xl mx-auto">
+        Su Airbnb, gli appartamenti per 8 o più ospiti nel centro di Padova sono appena 10. Una domanda altissima, un'offerta irrisoria: condizioni ideali per praticare tariffe premium.
+      </p>
+    </div>
+
+    <!-- Stat highlight -->
+    <div class="grid grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto mb-10 md:mb-14 reveal">
+      <div class="bg-primary text-white rounded-3xl p-6 md:p-8 text-center card-lift">
+        <div class="font-headline text-4xl md:text-5xl text-tertiary-fixed mb-2">10</div>
+        <div class="text-white/70 text-xs md:text-sm">Competitor attivi<br>8+ ospiti su Airbnb</div>
+      </div>
+      <div class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 text-center border border-outline-variant/20 card-lift">
+        <div class="font-headline text-4xl md:text-5xl text-primary mb-2">2M+</div>
+        <div class="text-on-surface-variant text-xs md:text-sm">Presenze turistiche<br>annue a Padova</div>
+      </div>
+      <div class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 text-center border border-outline-variant/20 card-lift">
+        <div class="font-headline text-4xl md:text-5xl text-primary mb-2">€352</div>
+        <div class="text-on-surface-variant text-xs md:text-sm">ADR medio<br>stimato mercato</div>
+      </div>
+    </div>
+
+    <!-- Competitor table -->
+    <div class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 shadow-sm border border-outline-variant/20 mb-8 reveal" style="transition-delay:.1s">
+      <h3 class="font-headline text-xl text-primary mb-6">I 10 appartamenti per gruppi attivi su Airbnb — Padova centro</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse text-sm min-w-[520px]">
+          <thead>
+            <tr class="border-b-2 border-outline-variant">
+              <th class="py-3 text-left font-headline text-primary text-xs">#</th>
+              <th class="py-3 text-left font-headline text-primary text-xs">Listing ID</th>
+              <th class="py-3 text-left font-headline text-primary text-xs">Ospiti</th>
+              <th class="py-3 text-right font-headline text-primary text-xs">Link</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-surface-container text-xs md:text-sm">
+            <tr class="hover:bg-surface-container-low transition-colors">
+              <td class="py-3 text-on-surface-variant font-medium">1</td>
+              <td class="py-3 font-mono text-xs text-primary">1360822496647070880</td>
+              <td class="py-3">8+</td>
+              <td class="py-3 text-right"><a href="https://www.airbnb.it/rooms/1360822496647070880" target="_blank" class="text-secondary hover:underline text-xs">Airbnb →</a></td>
+            </tr>
+            <tr class="hover:bg-surface-container-low transition-colors">
+              <td class="py-3 text-on-surface-variant font-medium">2</td>
+              <td class="py-3 font-mono text-xs text-primary">1180549688989748449</td>
+              <td class="py-3">8+</td>
+              <td class="py-3 text-right"><a href="https://www.airbnb.it/rooms/1180549688989748449" target="_blank" class="text-secondary hover:underline text-xs">Airbnb →</a></td>
+            </tr>
+            <tr class="hover:bg-surface-container-low transition-colors">
+              <td class="py-3 text-on-surface-variant font-medium">3</td>
+              <td class="py-3 font-mono text-xs text-primary">1376830566650531709</td>
+              <td class="py-3">8+</td>
+              <td class="py-3 text-right"><a href="https://www.airbnb.it/rooms/1376830566650531709" target="_blank" class="text-secondary hover:underline text-xs">Airbnb →</a></td>
+            </tr>
+            <tr class="hover:bg-surface-container-low transition-colors">
+              <td class="py-3 text-on-surface-variant font-medium">4</td>
+              <td class="py-3 font-mono text-xs text-primary">1391251295856948703</td>
+              <td class="py-3">8+</td>
+              <td class="py-3 text-right"><a href="https://www.airbnb.it/rooms/1391251295856948703" target="_blank" class="text-secondary hover:underline text-xs">Airbnb →</a></td>
+            </tr>
+            <tr class="hover:bg-surface-container-low transition-colors">
+              <td class="py-3 text-on-surface-variant font-medium">5</td>
+              <td class="py-3 font-mono text-xs text-primary">1603782793545780999</td>
+              <td class="py-3">8+</td>
+              <td class="py-3 text-right"><a href="https://www.airbnb.it/rooms/1603782793545780999" target="_blank" class="text-secondary hover:underline text-xs">Airbnb →</a></td>
+            </tr>
+            <tr class="hover:bg-surface-container-low transition-colors">
+              <td class="py-3 text-on-surface-variant font-medium">6</td>
+              <td class="py-3 font-mono text-xs text-primary">1359247600118882909</td>
+              <td class="py-3">8+</td>
+              <td class="py-3 text-right"><a href="https://www.airbnb.it/rooms/1359247600118882909" target="_blank" class="text-secondary hover:underline text-xs">Airbnb →</a></td>
+            </tr>
+            <tr class="hover:bg-surface-container-low transition-colors">
+              <td class="py-3 text-on-surface-variant font-medium">7</td>
+              <td class="py-3 font-mono text-xs text-primary">1085357289037493395</td>
+              <td class="py-3">8+</td>
+              <td class="py-3 text-right"><a href="https://www.airbnb.it/rooms/1085357289037493395" target="_blank" class="text-secondary hover:underline text-xs">Airbnb →</a></td>
+            </tr>
+            <tr class="hover:bg-surface-container-low transition-colors">
+              <td class="py-3 text-on-surface-variant font-medium">8</td>
+              <td class="py-3 font-mono text-xs text-primary">928921306822909690</td>
+              <td class="py-3">8+</td>
+              <td class="py-3 text-right"><a href="https://www.airbnb.it/rooms/928921306822909690" target="_blank" class="text-secondary hover:underline text-xs">Airbnb →</a></td>
+            </tr>
+            <tr class="hover:bg-surface-container-low transition-colors">
+              <td class="py-3 text-on-surface-variant font-medium">9</td>
+              <td class="py-3 font-mono text-xs text-primary">1354927843480361037</td>
+              <td class="py-3">8+</td>
+              <td class="py-3 text-right"><a href="https://www.airbnb.it/rooms/1354927843480361037" target="_blank" class="text-secondary hover:underline text-xs">Airbnb →</a></td>
+            </tr>
+            <tr class="hover:bg-surface-container-low transition-colors">
+              <td class="py-3 text-on-surface-variant font-medium">10</td>
+              <td class="py-3 font-mono text-xs text-primary">26769365</td>
+              <td class="py-3">8+</td>
+              <td class="py-3 text-right"><a href="https://www.airbnb.it/rooms/26769365" target="_blank" class="text-secondary hover:underline text-xs">Airbnb →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-on-surface-variant mt-4">Dati rilevati su Airbnb — aprile 2026. Ricerca per appartamenti con 8+ ospiti nel centro storico di Padova.</p>
+    </div>
+
+    <!-- Insight box -->
+    <div class="bg-primary rounded-3xl p-7 md:p-8 text-white max-w-3xl mx-auto reveal" style="transition-delay:.2s">
+      <div class="flex items-start gap-4">
+        <span class="material-symbols-outlined text-tertiary-fixed text-3xl flex-shrink-0 mt-0.5">insights</span>
+        <div>
+          <h4 class="font-headline text-lg md:text-xl mb-2">Cosa significa per la tua proprietà</h4>
+          <p class="text-white/80 text-sm md:text-base leading-relaxed">
+            Con soli 10 appartamenti disponibili per gruppi in tutta la città, ogni richiesta ha pochissime alternative. Questo si traduce in <strong class="text-tertiary-fixed">occupazione più alta</strong>, <strong class="text-tertiary-fixed">tariffe più elevate</strong> e <strong class="text-tertiary-fixed">meno pressione sui prezzi</strong> rispetto a mercati saturi. Il tuo appartamento entra in un segmento di scarsità strutturale.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
      FINANCIAL PROJECTION
 ══════════════════════════════════════════════ -->
 <section class="py-16 md:py-24 bg-surface-container-low" id="scenarios">
@@ -305,11 +431,11 @@
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
         <div>
           <h3 class="font-headline text-xl md:text-2xl text-primary">Ricavi mensili previsti</h3>
-          <p class="text-sm text-on-surface-variant mt-1">Ricavo lordo e utile netto mese per mese — in €</p>
+          <p class="text-sm text-on-surface-variant mt-1">Ricavo lordo e reddito netto mese per mese — in €</p>
         </div>
         <div class="flex gap-5 text-xs md:text-sm">
           <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-primary"></span>Ricavo lordo</span>
-          <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-tertiary-fixed"></span>Utile netto</span>
+          <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-tertiary-fixed"></span>Reddito netto</span>
         </div>
       </div>
       <div style="position: relative; height: 320px;">
@@ -330,7 +456,7 @@
               <th class="py-3 text-right font-headline text-primary text-xs">Tariffa / notte</th>
               <th class="py-3 text-right font-headline text-primary text-xs">Notti</th>
               <th class="py-3 text-right font-headline text-primary text-xs">Ricavo lordo</th>
-              <th class="py-3 text-right font-headline text-secondary text-xs">Utile netto</th>
+              <th class="py-3 text-right font-headline text-secondary text-xs">Reddito netto</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-surface-container text-xs md:text-sm">
@@ -339,95 +465,95 @@
               <td class="py-2.5 text-right">€285</td>
               <td class="py-2.5 text-right">12</td>
               <td class="py-2.5 text-right font-medium">€3.357</td>
-              <td class="py-2.5 text-right text-secondary font-semibold">€2.119</td>
+              <td class="py-2.5 text-right text-secondary font-semibold">€1.447</td>
             </tr>
             <tr class="hover:bg-surface-container-low transition-colors">
               <td class="py-2.5 text-on-surface-variant font-medium">Febbraio</td>
               <td class="py-2.5 text-right">€295</td>
               <td class="py-2.5 text-right">12</td>
               <td class="py-2.5 text-right font-medium">€3.634</td>
-              <td class="py-2.5 text-right text-secondary font-semibold">€2.296</td>
+              <td class="py-2.5 text-right text-secondary font-semibold">€1.569</td>
             </tr>
             <tr class="hover:bg-surface-container-low transition-colors">
               <td class="py-2.5 text-on-surface-variant font-medium">Marzo</td>
               <td class="py-2.5 text-right">€320</td>
               <td class="py-2.5 text-right">17</td>
               <td class="py-2.5 text-right font-medium">€5.357</td>
-              <td class="py-2.5 text-right text-secondary font-semibold">€3.398</td>
+              <td class="py-2.5 text-right text-secondary font-semibold">€2.327</td>
             </tr>
             <tr class="hover:bg-surface-container-low transition-colors">
               <td class="py-2.5 text-on-surface-variant font-medium">Aprile</td>
               <td class="py-2.5 text-right">€370</td>
               <td class="py-2.5 text-right">19</td>
               <td class="py-2.5 text-right font-medium">€7.104</td>
-              <td class="py-2.5 text-right text-secondary font-semibold">€4.517</td>
+              <td class="py-2.5 text-right text-secondary font-semibold">€3.096</td>
             </tr>
             <tr class="hover:bg-surface-container-low transition-colors">
               <td class="py-2.5 text-on-surface-variant font-medium">Maggio</td>
               <td class="py-2.5 text-right">€395</td>
               <td class="py-2.5 text-right">22</td>
               <td class="py-2.5 text-right font-medium">€8.572</td>
-              <td class="py-2.5 text-right text-secondary font-semibold">€5.456</td>
+              <td class="py-2.5 text-right text-secondary font-semibold">€3.742</td>
             </tr>
             <tr class="hover:bg-surface-container-low transition-colors">
               <td class="py-2.5 text-on-surface-variant font-medium">Giugno</td>
               <td class="py-2.5 text-right">€405</td>
               <td class="py-2.5 text-right">22</td>
               <td class="py-2.5 text-right font-medium">€8.748</td>
-              <td class="py-2.5 text-right text-secondary font-semibold">€5.569</td>
+              <td class="py-2.5 text-right text-secondary font-semibold">€3.819</td>
             </tr>
             <tr class="hover:bg-surface-container-low transition-colors">
               <td class="py-2.5 text-on-surface-variant font-medium">Luglio</td>
               <td class="py-2.5 text-right">€345</td>
               <td class="py-2.5 text-right">18</td>
               <td class="py-2.5 text-right font-medium">€6.310</td>
-              <td class="py-2.5 text-right text-secondary font-semibold">€4.008</td>
+              <td class="py-2.5 text-right text-secondary font-semibold">€2.746</td>
             </tr>
             <tr class="hover:bg-surface-container-low transition-colors">
               <td class="py-2.5 text-on-surface-variant font-medium">Agosto</td>
               <td class="py-2.5 text-right">€315</td>
               <td class="py-2.5 text-right">16</td>
               <td class="py-2.5 text-right font-medium">€4.883</td>
-              <td class="py-2.5 text-right text-secondary font-semibold">€3.095</td>
+              <td class="py-2.5 text-right text-secondary font-semibold">€2.119</td>
             </tr>
             <tr class="hover:bg-surface-container-low transition-colors">
               <td class="py-2.5 text-on-surface-variant font-medium">Settembre</td>
               <td class="py-2.5 text-right">€370</td>
               <td class="py-2.5 text-right">20</td>
               <td class="py-2.5 text-right font-medium">€7.437</td>
-              <td class="py-2.5 text-right text-secondary font-semibold">€4.730</td>
+              <td class="py-2.5 text-right text-secondary font-semibold">€3.242</td>
             </tr>
             <tr class="hover:bg-surface-container-low transition-colors">
               <td class="py-2.5 text-on-surface-variant font-medium">Ottobre</td>
               <td class="py-2.5 text-right">€380</td>
               <td class="py-2.5 text-right">21</td>
               <td class="py-2.5 text-right font-medium">€8.128</td>
-              <td class="py-2.5 text-right text-secondary font-semibold">€5.172</td>
+              <td class="py-2.5 text-right text-secondary font-semibold">€3.546</td>
             </tr>
             <tr class="hover:bg-surface-container-low transition-colors">
               <td class="py-2.5 text-on-surface-variant font-medium">Novembre</td>
               <td class="py-2.5 text-right">€320</td>
               <td class="py-2.5 text-right">16</td>
               <td class="py-2.5 text-right font-medium">€5.184</td>
-              <td class="py-2.5 text-right text-secondary font-semibold">€3.288</td>
+              <td class="py-2.5 text-right text-secondary font-semibold">€2.251</td>
             </tr>
             <tr class="hover:bg-surface-container-low transition-colors">
               <td class="py-2.5 text-on-surface-variant font-medium">Dicembre</td>
               <td class="py-2.5 text-right">€340</td>
               <td class="py-2.5 text-right">16</td>
               <td class="py-2.5 text-right font-medium">€5.481</td>
-              <td class="py-2.5 text-right text-secondary font-semibold">€3.478</td>
+              <td class="py-2.5 text-right text-secondary font-semibold">€2.382</td>
             </tr>
             <tr class="bg-primary/8 font-bold">
               <td class="py-4 px-2 rounded-l-xl text-primary">TOTALE</td>
               <td class="py-4 text-right text-primary">€352 medio</td>
               <td class="py-4 text-right text-primary">211</td>
               <td class="py-4 text-right text-primary">€74.195</td>
-              <td class="py-4 px-2 text-right text-secondary rounded-r-xl text-base">€47.125</td>
+              <td class="py-4 px-2 text-right text-secondary rounded-r-xl text-base">€32.286</td>
             </tr>
           </tbody>
         </table>
-        <p class="text-xs text-on-surface-variant mt-4">*Utile netto calcolato dopo commissioni OTA (15%) e cedolare secca (21%). Manutenzione €360/anno.</p>
+        <p class="text-xs text-on-surface-variant mt-4">*Reddito netto calcolato dopo commissioni OTA (15%), cedolare secca (21%), gestione Moorent (20%) e manutenzione €360/anno.</p>
       </div>
 
       <!-- Summary card -->
@@ -452,11 +578,14 @@
               <span class="text-white/70 text-sm">Manutenzione ordinaria</span>
               <span class="text-tertiary-fixed/80 text-sm">−€360</span>
             </div>
-            <div class="flex justify-between items-center pt-3">
-              <span class="text-white font-bold text-sm">Utile netto (prima di gestione)</span>
-              <span class="text-tertiary-fixed font-bold text-2xl">€47.125</span>
+            <div class="flex justify-between items-center py-3 border-b border-white/15">
+              <span class="text-white/70 text-sm">Gestione Moorent (20%)</span>
+              <span class="text-tertiary-fixed/80 text-sm">−€14.839</span>
             </div>
-            <p class="text-white/40 text-xs pt-2">Con commissione Moorent (20%): reddito netto €32.286</p>
+            <div class="flex justify-between items-center pt-3">
+              <span class="text-white font-bold text-sm">Reddito netto per Michele</span>
+              <span class="text-tertiary-fixed font-bold text-2xl">€32.286</span>
+            </div>
           </div>
         </div>
 
@@ -522,18 +651,15 @@
             <p>Parametri fissi (da business plan):</p>
             <p>· Commissioni OTA: 15% del ricavo</p>
             <p>· Cedolare secca: 21% del ricavo</p>
+            <p>· Gestione Moorent: 20% del ricavo</p>
             <p>· Manutenzione: €360/anno</p>
           </div>
         </div>
 
         <!-- Results -->
         <div class="flex flex-col justify-center items-center bg-white/10 rounded-2xl p-6 border border-white/10">
-          <span class="text-white/60 text-xs uppercase tracking-widest mb-4 text-center">Utile Netto Annuo Stimato</span>
-          <div id="netResult" class="font-headline text-5xl md:text-6xl text-white mb-3 transition-all duration-500">€47.125</div>
-          <div class="flex items-center gap-2 text-emerald-400 text-sm mb-6">
-            <span class="material-symbols-outlined text-sm">trending_up</span>
-            <span id="roiResult">ROI Stimato 9.4%</span>
-          </div>
+          <span class="text-white/60 text-xs uppercase tracking-widest mb-4 text-center">Reddito Netto Annuo Stimato</span>
+          <div id="netResult" class="font-headline text-5xl md:text-6xl text-white mb-6 transition-all duration-500">€32.286</div>
           <div class="w-full space-y-3 border-t border-white/10 pt-5">
             <div class="flex justify-between text-sm">
               <span class="text-white/60">Ricavo lordo</span>
@@ -548,11 +674,14 @@
               <span id="taxResult" class="text-tertiary-fixed/90">−€15.581</span>
             </div>
             <div class="flex justify-between text-sm">
+              <span class="text-white/60">Gestione Moorent (20%)</span>
+              <span id="pmResult" class="text-tertiary-fixed/90">−€14.839</span>
+            </div>
+            <div class="flex justify-between text-sm">
               <span class="text-white/60">Manutenzione</span>
               <span class="text-white/80">−€360</span>
             </div>
           </div>
-          <p class="text-white/25 text-xs mt-4 text-center">*Valore immobile stimato: €500.000</p>
         </div>
       </div>
     </div>
@@ -694,7 +823,7 @@
               <p class="text-xs text-white/60">Incassa ogni mese, senza occuparti di nulla</p>
             </div>
           </div>
-          <p class="text-xs text-on-surface-variant mt-4 text-center">*La tabella mensile mostra l'utile prima della commissione di gestione Moorent</p>
+          <p class="text-xs text-on-surface-variant mt-4 text-center">*Tutti i valori includono commissioni OTA (15%), cedolare secca (21%) e gestione Moorent (20%)</p>
         </div>
       </div>
     </div>
@@ -819,8 +948,8 @@ document.querySelectorAll('.grid').forEach(g => counterObserver.observe(g));
           order: 2,
         },
         {
-          label: 'Utile netto',
-          data: [2119, 2296, 3398, 4517, 5456, 5569, 4008, 3095, 4730, 5172, 3288, 3478],
+          label: 'Reddito netto',
+          data: [1447, 1569, 2327, 3096, 3742, 3819, 2746, 2119, 3242, 3546, 2251, 2382],
           backgroundColor: '#ffdea5',
           borderRadius: 6,
           order: 1,
@@ -856,8 +985,6 @@ document.querySelectorAll('.grid').forEach(g => counterObserver.observe(g));
 })();
 
 // ── Calculator ────────────────────────────────
-const PROPERTY_VALUE = 500000;
-
 function updateCalc() {
   const adr = parseInt(document.getElementById('adrSlider').value);
   const occ = parseInt(document.getElementById('occSlider').value);
@@ -867,15 +994,15 @@ function updateCalc() {
   const gross = Math.round(adr * 365 * (occ / 100));
   const otaFee = Math.round(gross * 0.15);
   const taxes = Math.round(gross * 0.21);
+  const pmFee = Math.round(gross * 0.20);
   const maintenance = 360;
-  const net = gross - otaFee - taxes - maintenance;
-  const roi = ((net / PROPERTY_VALUE) * 100).toFixed(1);
+  const net = gross - otaFee - taxes - pmFee - maintenance;
 
   document.getElementById('grossResult').textContent = '€' + gross.toLocaleString('it-IT');
   document.getElementById('otaResult').textContent = '−€' + otaFee.toLocaleString('it-IT');
   document.getElementById('taxResult').textContent = '−€' + taxes.toLocaleString('it-IT');
+  document.getElementById('pmResult').textContent = '−€' + pmFee.toLocaleString('it-IT');
   document.getElementById('netResult').textContent = '€' + net.toLocaleString('it-IT');
-  document.getElementById('roiResult').textContent = 'ROI Stimato ' + roi + '%';
 }
 
 updateCalc();
@@ -887,7 +1014,7 @@ window.addEventListener('scroll', () => {
 
 // ── Nav active link ───────────────────────────
 const navLinks = document.querySelectorAll('#main-nav a.nav-link');
-const sectionIds = ['analysis', 'scenarios', 'calculator', 'legals', 'strategy'];
+const sectionIds = ['analysis', 'competitors', 'scenarios', 'calculator', 'legals', 'strategy'];
 
 function updateActiveNav() {
   let current = sectionIds[0];
