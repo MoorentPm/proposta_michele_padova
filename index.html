@@ -107,6 +107,10 @@
   }
   [data-tip]:hover::after { opacity: 1; }
 
+  /* Responsive chart height */
+  .chart-container { position: relative; height: 320px; }
+  @media (max-width: 640px) { .chart-container { height: 220px; } }
+
   /* Hero photo background */
   .hero-photo {
     background-image:
@@ -306,17 +310,17 @@
     </div>
 
     <!-- Stat highlight -->
-    <div class="grid grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto mb-10 md:mb-14 reveal">
-      <div class="bg-primary text-white rounded-3xl p-6 md:p-8 text-center card-lift">
-        <div class="font-headline text-4xl md:text-5xl text-tertiary-fixed mb-2">10</div>
+    <div class="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 max-w-3xl mx-auto mb-10 md:mb-14 reveal">
+      <div class="bg-primary text-white rounded-2xl sm:rounded-3xl p-3 sm:p-6 md:p-8 text-center card-lift">
+        <div class="font-headline text-2xl sm:text-4xl md:text-5xl text-tertiary-fixed mb-1 sm:mb-2">10</div>
         <div class="text-white/70 text-xs md:text-sm">Competitor attivi<br>8+ ospiti su Airbnb</div>
       </div>
-      <div class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 text-center border border-outline-variant/20 card-lift">
-        <div class="font-headline text-4xl md:text-5xl text-primary mb-2">2M+</div>
+      <div class="bg-surface-container-lowest rounded-2xl sm:rounded-3xl p-3 sm:p-6 md:p-8 text-center border border-outline-variant/20 card-lift">
+        <div class="font-headline text-2xl sm:text-4xl md:text-5xl text-primary mb-1 sm:mb-2">2M+</div>
         <div class="text-on-surface-variant text-xs md:text-sm">Presenze turistiche<br>annue a Padova</div>
       </div>
-      <div class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 text-center border border-outline-variant/20 card-lift">
-        <div class="font-headline text-4xl md:text-5xl text-primary mb-2">€352</div>
+      <div class="bg-surface-container-lowest rounded-2xl sm:rounded-3xl p-3 sm:p-6 md:p-8 text-center border border-outline-variant/20 card-lift">
+        <div class="font-headline text-2xl sm:text-4xl md:text-5xl text-primary mb-1 sm:mb-2">€352</div>
         <div class="text-on-surface-variant text-xs md:text-sm">ADR medio<br>stimato mercato</div>
       </div>
     </div>
@@ -438,7 +442,7 @@
           <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-tertiary-fixed"></span>Reddito netto</span>
         </div>
       </div>
-      <div style="position: relative; height: 320px;">
+      <div class="chart-container">
         <canvas id="monthlyChart"></canvas>
       </div>
     </div>
@@ -582,9 +586,9 @@
               <span class="text-white/70 text-sm">Gestione Moorent (20%)</span>
               <span class="text-tertiary-fixed/80 text-sm">−€14.839</span>
             </div>
-            <div class="flex justify-between items-center pt-3">
-              <span class="text-white font-bold text-sm">Reddito netto per Michele</span>
-              <span class="text-tertiary-fixed font-bold text-2xl">€32.286</span>
+            <div class="flex justify-between items-start gap-2 pt-3">
+              <span class="text-white font-bold text-sm min-w-0">Reddito netto per Michele</span>
+              <span class="text-tertiary-fixed font-bold text-2xl shrink-0">€32.286</span>
             </div>
           </div>
         </div>
@@ -809,16 +813,16 @@
               </div>
             </div>
             <div class="bg-amber-50 rounded-2xl p-4 border border-amber-200">
-              <div class="flex justify-between items-center mb-1">
-                <span class="font-semibold text-secondary text-sm">Commissione gestione Moorent (20%)</span>
-                <span class="font-bold text-secondary">−€14.839</span>
+              <div class="flex justify-between items-start gap-2 mb-1">
+                <span class="font-semibold text-secondary text-sm min-w-0">Commissione gestione Moorent (20%)</span>
+                <span class="font-bold text-secondary shrink-0">−€14.839</span>
               </div>
               <p class="text-xs text-on-surface-variant">Tutta la gestione operativa — nessun costo aggiuntivo nascosto</p>
             </div>
             <div class="bg-primary rounded-2xl p-5">
-              <div class="flex justify-between items-center mb-1">
-                <span class="font-bold text-white text-sm">Reddito netto per Michele</span>
-                <span class="font-bold text-tertiary-fixed text-2xl">€32.286</span>
+              <div class="flex justify-between items-start gap-2 mb-1">
+                <span class="font-bold text-white text-sm min-w-0">Reddito netto per Michele</span>
+                <span class="font-bold text-tertiary-fixed text-2xl shrink-0">€32.286</span>
               </div>
               <p class="text-xs text-white/60">Incassa ogni mese, senza occuparti di nulla</p>
             </div>
